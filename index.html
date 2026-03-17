@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="head">
+        <h2>Kanban Board</h2>
+        <button id="darkmode">🌙</button>
+    </div>
+    
+    <div class="contain-box" id="container">
+        
+        <div class="column" id="todo"> 
+            <h3>Todo Tasks</h3>
+            <div class="task-list"></div>
+            <button class="add-task"> Add Task</button>
+        </div>
+        <div class="column" id="progress">
+            <h3> In Progress</h3>
+            <div class="task-list"></div>
+            <button class="add-task"> Add Task</button>
+        </div>
+        <div class="column" id="done">
+            <h3> Done</h3>
+            <div class="task-list"></div>
+            <button class="add-task"> Add Task</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

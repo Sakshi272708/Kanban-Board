@@ -1,0 +1,164 @@
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding:20px;
+    max-width:900px;
+    min-height:400px ;
+    margin: 2px auto;
+    border-radius:10px ;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) ;
+    background-color: rgb(106, 168, 168);
+    color: white;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(75, 152, 183);
+    border-radius: 10px;
+    letter-spacing: 10px;
+    position: relative;
+    padding: 15px;
+}
+.head h2{
+    text-decoration: underline;
+    font-weight: 800;
+    font-size: 30px;
+}
+.head button{
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+    color: white;
+    font-weight: 600;
+    background-color: none;
+    box-shadow: 0 5px 10px rgba(255,255,255,0.1) ;
+}
+.column{
+    flex: 1 1 220px;
+}
+.task-list{
+    min-height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15) ;
+    max-width: 200px;
+    padding:10px;
+    color: black;
+}
+.add-task{
+    margin-top: 10px;
+    padding:10px;
+    border:1px solid black;
+    background-color: rgb(110, 185, 185);
+    border-radius:10px ;
+    margin-left: 8px;
+    font-weight: 900;
+    color: white;
+    box-shadow: 20px;
+    cursor: pointer;
+    transition: all 0.2 ease;
+}
+.add-task:hover{
+    transform: translateY(-2px);
+}
+.task{
+    background-color: rgb(78, 106, 97);
+    color: white;
+    border-radius:4px ;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    cursor: grab;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.task.dragging{
+    opacity: 0.5;
+    transform: scale(1.05);
+}
+.task-input{
+    width: 95%;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+}
+.task:hover{
+    transform: scale(1.02);
+    transition:0.2s;
+}
+.dlt-btn{
+    border: none;
+    background-color:rgb(78, 106, 97) ;
+    cursor: pointer;
+}
+#darkmode{
+    transition: all 0.2s ease;
+}
+#darkmode:hover{
+    transform: translateY(-2px);
+}
+.completed{
+    text-decoration: line-through;
+}
+.dark{
+    background:#1e1e1ed4;
+    color:white;
+}
+.dark .head{
+    background-color: rgba(0, 0, 0, 0.736);
+    color: white;
+}
+.dark .task-list{
+    background:#2d2d2dd4;
+    color: white;
+}
+
+.dark .task{
+    background:#3b3b3b72;
+    color: white;
+}
+.dark #container{
+    background-color: rgba(0, 0, 0, 0.421);
+    color: white;
+}
+.dark #darkmode{
+    background-color: rgba(0, 0, 0, 0.283);
+    border:1px solid white;
+    box-shadow:10px 5px 10px rgba(rgb(255, 255, 255)) ;
+
+}
+@media (max-width:768px){
+   #container{
+    flex-direction: column;
+    align-items: center;
+   }
+   .task-list{
+    max-width: 100%;
+   }
+   .column{
+    width: 100%;
+   }
+}
+@media (max-width:500px){
+    .head{
+        letter-spacing: 3px;
+        padding: 12px;
+    }
+
+    .head button{
+        right: 8px;
+        top: 8px;
+        padding:6px;
+        font-size: 12px;
+    }
+}
+
